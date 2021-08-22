@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		E4F8E67B26D2614900BB52B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F8E67926D2614900BB52B9 /* Main.storyboard */; };
 		E4F8E67D26D2614C00BB52B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F8E67C26D2614C00BB52B9 /* Assets.xcassets */; };
 		E4F8E68026D2614C00BB52B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F8E67E26D2614C00BB52B9 /* LaunchScreen.storyboard */; };
+		E4F8E68926D2766100BB52B9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E68826D2766100BB52B9 /* Realm */; };
+		E4F8E68B26D2766100BB52B9 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E68A26D2766100BB52B9 /* RealmSwift */; };
+		E4F8E68E26D2782B00BB52B9 /* RxSwiftExt in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E68D26D2782B00BB52B9 /* RxSwiftExt */; };
+		E4F8E69126D278A500BB52B9 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E69026D278A500BB52B9 /* RxAlamofire */; };
+		E4F8E69426D2794800BB52B9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E69326D2794800BB52B9 /* RxSwift */; };
+		E4F8E69726D27AFF00BB52B9 /* EasyDi in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E69626D27AFF00BB52B9 /* EasyDi */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4F8E68E26D2782B00BB52B9 /* RxSwiftExt in Frameworks */,
+				E4F8E69726D27AFF00BB52B9 /* EasyDi in Frameworks */,
+				E4F8E69126D278A500BB52B9 /* RxAlamofire in Frameworks */,
+				E4F8E69426D2794800BB52B9 /* RxSwift in Frameworks */,
+				E4F8E68B26D2766100BB52B9 /* RealmSwift in Frameworks */,
+				E4F8E68926D2766100BB52B9 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,14 @@
 			dependencies = (
 			);
 			name = WorldMoney;
+			packageProductDependencies = (
+				E4F8E68826D2766100BB52B9 /* Realm */,
+				E4F8E68A26D2766100BB52B9 /* RealmSwift */,
+				E4F8E68D26D2782B00BB52B9 /* RxSwiftExt */,
+				E4F8E69026D278A500BB52B9 /* RxAlamofire */,
+				E4F8E69326D2794800BB52B9 /* RxSwift */,
+				E4F8E69626D27AFF00BB52B9 /* EasyDi */,
+			);
 			productName = WorldMoney;
 			productReference = E4F8E67026D2614900BB52B9 /* WorldMoney.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +130,13 @@
 				Base,
 			);
 			mainGroup = E4F8E66726D2614900BB52B9;
+			packageReferences = (
+				E4F8E68726D2766100BB52B9 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+				E4F8E68C26D2782B00BB52B9 /* XCRemoteSwiftPackageReference "RxSwiftExt" */,
+				E4F8E68F26D278A500BB52B9 /* XCRemoteSwiftPackageReference "RxAlamofire" */,
+				E4F8E69226D2794800BB52B9 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				E4F8E69526D27AFF00BB52B9 /* XCRemoteSwiftPackageReference "EasyDi" */,
+			);
 			productRefGroup = E4F8E67126D2614900BB52B9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -341,6 +368,82 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E4F8E68726D2766100BB52B9 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.12.0;
+			};
+		};
+		E4F8E68C26D2782B00BB52B9 /* XCRemoteSwiftPackageReference "RxSwiftExt" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxSwiftExt.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.0;
+			};
+		};
+		E4F8E68F26D278A500BB52B9 /* XCRemoteSwiftPackageReference "RxAlamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxAlamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.1.2;
+			};
+		};
+		E4F8E69226D2794800BB52B9 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.0;
+			};
+		};
+		E4F8E69526D27AFF00BB52B9 /* XCRemoteSwiftPackageReference "EasyDi" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/TinkoffCreditSystems/EasyDi.git";
+			requirement = {
+				kind = revision;
+				revision = 18c5be2d9be3e84e9e7812902b2612857501d0e7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E4F8E68826D2766100BB52B9 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F8E68726D2766100BB52B9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		E4F8E68A26D2766100BB52B9 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F8E68726D2766100BB52B9 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+		E4F8E68D26D2782B00BB52B9 /* RxSwiftExt */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F8E68C26D2782B00BB52B9 /* XCRemoteSwiftPackageReference "RxSwiftExt" */;
+			productName = RxSwiftExt;
+		};
+		E4F8E69026D278A500BB52B9 /* RxAlamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F8E68F26D278A500BB52B9 /* XCRemoteSwiftPackageReference "RxAlamofire" */;
+			productName = RxAlamofire;
+		};
+		E4F8E69326D2794800BB52B9 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F8E69226D2794800BB52B9 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		E4F8E69626D27AFF00BB52B9 /* EasyDi */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E4F8E69526D27AFF00BB52B9 /* XCRemoteSwiftPackageReference "EasyDi" */;
+			productName = EasyDi;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E4F8E66826D2614900BB52B9 /* Project object */;
 }
