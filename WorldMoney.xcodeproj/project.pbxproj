@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */; };
 		E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67326D2614900BB52B9 /* AppDelegate.swift */; };
 		E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */; };
 		E4F8E67826D2614900BB52B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67726D2614900BB52B9 /* ViewController.swift */; };
@@ -19,9 +20,15 @@
 		E4F8E69126D278A500BB52B9 /* RxAlamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E69026D278A500BB52B9 /* RxAlamofire */; };
 		E4F8E69426D2794800BB52B9 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E69326D2794800BB52B9 /* RxSwift */; };
 		E4F8E69726D27AFF00BB52B9 /* EasyDi in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E69626D27AFF00BB52B9 /* EasyDi */; };
+		E4F8E69C26D2991800BB52B9 /* NetworkCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E69B26D2991800BB52B9 /* NetworkCore.swift */; };
+		E4F8E69E26D29EA000BB52B9 /* NetworkCoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E69D26D29EA000BB52B9 /* NetworkCoreAssembly.swift */; };
+		E4F8E6A426D2A54800BB52B9 /* ConfigServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E6A326D2A54800BB52B9 /* ConfigServices.swift */; };
+		E4F8E6A626D2A5E200BB52B9 /* ConfigServicesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E6A526D2A5E200BB52B9 /* ConfigServicesAssembly.swift */; };
+		E4F8E6AA26D2AC9700BB52B9 /* StorageCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E6A926D2AC9700BB52B9 /* StorageCore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCoreAssembly.swift; sourceTree = "<group>"; };
 		E4F8E67026D2614900BB52B9 /* WorldMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F8E67326D2614900BB52B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +37,11 @@
 		E4F8E67C26D2614C00BB52B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4F8E67F26D2614C00BB52B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4F8E68126D2614C00BB52B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4F8E69B26D2991800BB52B9 /* NetworkCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCore.swift; sourceTree = "<group>"; };
+		E4F8E69D26D29EA000BB52B9 /* NetworkCoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCoreAssembly.swift; sourceTree = "<group>"; };
+		E4F8E6A326D2A54800BB52B9 /* ConfigServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigServices.swift; sourceTree = "<group>"; };
+		E4F8E6A526D2A5E200BB52B9 /* ConfigServicesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigServicesAssembly.swift; sourceTree = "<group>"; };
+		E4F8E6A926D2AC9700BB52B9 /* StorageCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +80,7 @@
 		E4F8E67226D2614900BB52B9 /* WorldMoney */ = {
 			isa = PBXGroup;
 			children = (
+				E4F8E69826D296B500BB52B9 /* Services */,
 				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
 				E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */,
 				E4F8E67726D2614900BB52B9 /* ViewController.swift */,
@@ -77,6 +90,51 @@
 				E4F8E68126D2614C00BB52B9 /* Info.plist */,
 			);
 			path = WorldMoney;
+			sourceTree = "<group>";
+		};
+		E4F8E69826D296B500BB52B9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E6A726D2AC5E00BB52B9 /* Storage */,
+				E4F8E69926D296CB00BB52B9 /* Network */,
+				E4F8E6A326D2A54800BB52B9 /* ConfigServices.swift */,
+				E4F8E6A526D2A5E200BB52B9 /* ConfigServicesAssembly.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E4F8E69926D296CB00BB52B9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E69A26D296D600BB52B9 /* NetworkCore */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E4F8E69A26D296D600BB52B9 /* NetworkCore */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E69B26D2991800BB52B9 /* NetworkCore.swift */,
+				E4F8E69D26D29EA000BB52B9 /* NetworkCoreAssembly.swift */,
+			);
+			path = NetworkCore;
+			sourceTree = "<group>";
+		};
+		E4F8E6A726D2AC5E00BB52B9 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E6A826D2AC7100BB52B9 /* StorageCore */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E4F8E6A826D2AC7100BB52B9 /* StorageCore */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E6A926D2AC9700BB52B9 /* StorageCore.swift */,
+				E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */,
+			);
+			path = StorageCore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,8 +223,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F8E67826D2614900BB52B9 /* ViewController.swift in Sources */,
+				E4F8E6A426D2A54800BB52B9 /* ConfigServices.swift in Sources */,
+				E4F8E6AA26D2AC9700BB52B9 /* StorageCore.swift in Sources */,
 				E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */,
 				E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */,
+				E4F8E6A626D2A5E200BB52B9 /* ConfigServicesAssembly.swift in Sources */,
+				E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */,
+				E4F8E69C26D2991800BB52B9 /* NetworkCore.swift in Sources */,
+				E4F8E69E26D29EA000BB52B9 /* NetworkCoreAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
