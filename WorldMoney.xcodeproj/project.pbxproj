@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E49526D926D5323400D959AE /* MoneyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526D826D5323400D959AE /* MoneyResponse.swift */; };
+		E49526DB26D5328700D959AE /* StockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526DA26D5328700D959AE /* StockResponse.swift */; };
+		E49526DD26D532AA00D959AE /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526DC26D532AA00D959AE /* PriceResponse.swift */; };
+		E49526DF26D5336F00D959AE /* MoneyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526DE26D5336F00D959AE /* MoneyRealm.swift */; };
+		E49526E126D5347400D959AE /* StockRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E026D5347400D959AE /* StockRealm.swift */; };
+		E49526E326D5350B00D959AE /* PriceRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E226D5350B00D959AE /* PriceRealm.swift */; };
+		E49526E526D545C600D959AE /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E426D545C600D959AE /* Money.swift */; };
+		E49526E726D5462500D959AE /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E626D5462500D959AE /* Stock.swift */; };
+		E49526E926D5465800D959AE /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E826D5465800D959AE /* Price.swift */; };
 		E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */; };
 		E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67326D2614900BB52B9 /* AppDelegate.swift */; };
 		E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */; };
@@ -28,6 +37,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E49526D826D5323400D959AE /* MoneyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyResponse.swift; sourceTree = "<group>"; };
+		E49526DA26D5328700D959AE /* StockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockResponse.swift; sourceTree = "<group>"; };
+		E49526DC26D532AA00D959AE /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
+		E49526DE26D5336F00D959AE /* MoneyRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRealm.swift; sourceTree = "<group>"; };
+		E49526E026D5347400D959AE /* StockRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockRealm.swift; sourceTree = "<group>"; };
+		E49526E226D5350B00D959AE /* PriceRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceRealm.swift; sourceTree = "<group>"; };
+		E49526E426D545C600D959AE /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
+		E49526E626D5462500D959AE /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		E49526E826D5465800D959AE /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
 		E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCoreAssembly.swift; sourceTree = "<group>"; };
 		E4F8E67026D2614900BB52B9 /* WorldMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F8E67326D2614900BB52B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +79,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E49526D426D511B600D959AE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E49526D726D511DF00D959AE /* App */,
+				E49526D626D511D400D959AE /* Network */,
+				E49526D526D511C800D959AE /* Storage */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E49526D526D511C800D959AE /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				E49526DE26D5336F00D959AE /* MoneyRealm.swift */,
+				E49526E026D5347400D959AE /* StockRealm.swift */,
+				E49526E226D5350B00D959AE /* PriceRealm.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		E49526D626D511D400D959AE /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				E49526D826D5323400D959AE /* MoneyResponse.swift */,
+				E49526DA26D5328700D959AE /* StockResponse.swift */,
+				E49526DC26D532AA00D959AE /* PriceResponse.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		E49526D726D511DF00D959AE /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E49526E426D545C600D959AE /* Money.swift */,
+				E49526E626D5462500D959AE /* Stock.swift */,
+				E49526E826D5465800D959AE /* Price.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		E4F8E66726D2614900BB52B9 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +138,7 @@
 		E4F8E67226D2614900BB52B9 /* WorldMoney */ = {
 			isa = PBXGroup;
 			children = (
+				E49526D426D511B600D959AE /* Entities */,
 				E4F8E69826D296B500BB52B9 /* Services */,
 				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
 				E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */,
@@ -223,13 +282,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4F8E67826D2614900BB52B9 /* ViewController.swift in Sources */,
+				E49526E726D5462500D959AE /* Stock.swift in Sources */,
 				E4F8E6A426D2A54800BB52B9 /* ConfigServices.swift in Sources */,
+				E49526E126D5347400D959AE /* StockRealm.swift in Sources */,
+				E49526E326D5350B00D959AE /* PriceRealm.swift in Sources */,
+				E49526E926D5465800D959AE /* Price.swift in Sources */,
 				E4F8E6AA26D2AC9700BB52B9 /* StorageCore.swift in Sources */,
 				E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */,
 				E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */,
+				E49526DD26D532AA00D959AE /* PriceResponse.swift in Sources */,
 				E4F8E6A626D2A5E200BB52B9 /* ConfigServicesAssembly.swift in Sources */,
+				E49526DF26D5336F00D959AE /* MoneyRealm.swift in Sources */,
 				E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */,
+				E49526D926D5323400D959AE /* MoneyResponse.swift in Sources */,
 				E4F8E69C26D2991800BB52B9 /* NetworkCore.swift in Sources */,
+				E49526DB26D5328700D959AE /* StockResponse.swift in Sources */,
+				E49526E526D545C600D959AE /* Money.swift in Sources */,
 				E4F8E69E26D29EA000BB52B9 /* NetworkCoreAssembly.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
