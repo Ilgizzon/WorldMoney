@@ -23,11 +23,11 @@
 		E49BBC5126DA2B6400C144EA /* ApiMoneyServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5026DA2B6400C144EA /* ApiMoneyServiceAssembly.swift */; };
 		E49BBC5426DA2E3E00C144EA /* MoneyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5326DA2E3E00C144EA /* MoneyRepository.swift */; };
 		E49BBC5626DA52E800C144EA /* MoneyRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */; };
+		E49BBC6326DA749700C144EA /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC6126DA749700C144EA /* MainScreenView.swift */; };
+		E49BBC6426DA749700C144EA /* MainScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49BBC6226DA749700C144EA /* MainScreenView.xib */; };
 		E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */; };
 		E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67326D2614900BB52B9 /* AppDelegate.swift */; };
 		E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */; };
-		E4F8E67826D2614900BB52B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67726D2614900BB52B9 /* ViewController.swift */; };
-		E4F8E67B26D2614900BB52B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F8E67926D2614900BB52B9 /* Main.storyboard */; };
 		E4F8E67D26D2614C00BB52B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4F8E67C26D2614C00BB52B9 /* Assets.xcassets */; };
 		E4F8E68026D2614C00BB52B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4F8E67E26D2614C00BB52B9 /* LaunchScreen.storyboard */; };
 		E4F8E68926D2766100BB52B9 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = E4F8E68826D2766100BB52B9 /* Realm */; };
@@ -60,12 +60,12 @@
 		E49BBC5026DA2B6400C144EA /* ApiMoneyServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMoneyServiceAssembly.swift; sourceTree = "<group>"; };
 		E49BBC5326DA2E3E00C144EA /* MoneyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRepository.swift; sourceTree = "<group>"; };
 		E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRepositoryAssembly.swift; sourceTree = "<group>"; };
+		E49BBC6126DA749700C144EA /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
+		E49BBC6226DA749700C144EA /* MainScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenView.xib; sourceTree = "<group>"; };
 		E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCoreAssembly.swift; sourceTree = "<group>"; };
 		E4F8E67026D2614900BB52B9 /* WorldMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F8E67326D2614900BB52B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E4F8E67726D2614900BB52B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E4F8E67A26D2614900BB52B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4F8E67C26D2614C00BB52B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4F8E67F26D2614C00BB52B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E4F8E68126D2614C00BB52B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,6 +158,41 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		E49BBC5726DA711700C144EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E67E26D2614C00BB52B9 /* LaunchScreen.storyboard */,
+				E4F8E67C26D2614C00BB52B9 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		E49BBC5826DA714000C144EA /* AppLayer */ = {
+			isa = PBXGroup;
+			children = (
+				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
+				E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */,
+			);
+			path = AppLayer;
+			sourceTree = "<group>";
+		};
+		E49BBC5926DA717100C144EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC5A26DA729A00C144EA /* MainScreen */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E49BBC5A26DA729A00C144EA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC6126DA749700C144EA /* MainScreenView.swift */,
+				E49BBC6226DA749700C144EA /* MainScreenView.xib */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
 		E4F8E66726D2614900BB52B9 = {
 			isa = PBXGroup;
 			children = (
@@ -177,16 +212,13 @@
 		E4F8E67226D2614900BB52B9 /* WorldMoney */ = {
 			isa = PBXGroup;
 			children = (
+				E49BBC5926DA717100C144EA /* Views */,
+				E49BBC5826DA714000C144EA /* AppLayer */,
+				E49BBC5726DA711700C144EA /* Resources */,
 				E49BBC5226DA2E1000C144EA /* Repository */,
 				E49BBC4A26DA1A5900C144EA /* Extensions */,
 				E49526D426D511B600D959AE /* Entities */,
 				E4F8E69826D296B500BB52B9 /* Services */,
-				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
-				E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */,
-				E4F8E67726D2614900BB52B9 /* ViewController.swift */,
-				E4F8E67926D2614900BB52B9 /* Main.storyboard */,
-				E4F8E67C26D2614C00BB52B9 /* Assets.xcassets */,
-				E4F8E67E26D2614C00BB52B9 /* LaunchScreen.storyboard */,
 				E4F8E68126D2614C00BB52B9 /* Info.plist */,
 			);
 			path = WorldMoney;
@@ -315,7 +347,7 @@
 			files = (
 				E4F8E68026D2614C00BB52B9 /* LaunchScreen.storyboard in Resources */,
 				E4F8E67D26D2614C00BB52B9 /* Assets.xcassets in Resources */,
-				E4F8E67B26D2614900BB52B9 /* Main.storyboard in Resources */,
+				E49BBC6426DA749700C144EA /* MainScreenView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4F8E67826D2614900BB52B9 /* ViewController.swift in Sources */,
 				E49526E726D5462500D959AE /* Stock.swift in Sources */,
 				E4F8E6A426D2A54800BB52B9 /* ConfigServices.swift in Sources */,
 				E49BBC4926DA138B00C144EA /* ApiMoneyService.swift in Sources */,
@@ -348,6 +379,7 @@
 				E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */,
 				E49526D926D5323400D959AE /* MoneyResponse.swift in Sources */,
 				E4F8E69C26D2991800BB52B9 /* NetworkCore.swift in Sources */,
+				E49BBC6326DA749700C144EA /* MainScreenView.swift in Sources */,
 				E49526DB26D5328700D959AE /* StockResponse.swift in Sources */,
 				E49526E526D545C600D959AE /* Money.swift in Sources */,
 				E4F8E69E26D29EA000BB52B9 /* NetworkCoreAssembly.swift in Sources */,
@@ -357,14 +389,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		E4F8E67926D2614900BB52B9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E4F8E67A26D2614900BB52B9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E4F8E67E26D2614C00BB52B9 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -507,7 +531,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ilgiz.WorldMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -526,7 +550,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ilgiz.WorldMoney;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
