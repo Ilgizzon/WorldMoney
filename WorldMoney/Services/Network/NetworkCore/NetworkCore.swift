@@ -32,7 +32,7 @@ public class NetworkCore {
     func request(
         method: Alamofire.HTTPMethod,
         path: String,
-        parameters: [String: Any],
+        parameters: [String: Any]? = nil,
         encodingType: EncodingType = .http
     ) -> Observable<(HTTPURLResponse, Any)> {
         

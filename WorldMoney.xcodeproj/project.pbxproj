@@ -16,6 +16,13 @@
 		E49526E526D545C600D959AE /* Money.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E426D545C600D959AE /* Money.swift */; };
 		E49526E726D5462500D959AE /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E626D5462500D959AE /* Stock.swift */; };
 		E49526E926D5465800D959AE /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526E826D5465800D959AE /* Price.swift */; };
+		E49526EC26D5506400D959AE /* StoreMoneyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526EB26D5506400D959AE /* StoreMoneyService.swift */; };
+		E49BBC4926DA138B00C144EA /* ApiMoneyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC4826DA138B00C144EA /* ApiMoneyService.swift */; };
+		E49BBC4D26DA1ABB00C144EA /* ObservableTypeMapperExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC4C26DA1ABB00C144EA /* ObservableTypeMapperExtension.swift */; };
+		E49BBC4F26DA2A7E00C144EA /* StoreMoneyServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC4E26DA2A7E00C144EA /* StoreMoneyServiceAssembly.swift */; };
+		E49BBC5126DA2B6400C144EA /* ApiMoneyServiceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5026DA2B6400C144EA /* ApiMoneyServiceAssembly.swift */; };
+		E49BBC5426DA2E3E00C144EA /* MoneyRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5326DA2E3E00C144EA /* MoneyRepository.swift */; };
+		E49BBC5626DA52E800C144EA /* MoneyRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */; };
 		E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */; };
 		E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67326D2614900BB52B9 /* AppDelegate.swift */; };
 		E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */; };
@@ -46,6 +53,13 @@
 		E49526E426D545C600D959AE /* Money.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Money.swift; sourceTree = "<group>"; };
 		E49526E626D5462500D959AE /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
 		E49526E826D5465800D959AE /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		E49526EB26D5506400D959AE /* StoreMoneyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMoneyService.swift; sourceTree = "<group>"; };
+		E49BBC4826DA138B00C144EA /* ApiMoneyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMoneyService.swift; sourceTree = "<group>"; };
+		E49BBC4C26DA1ABB00C144EA /* ObservableTypeMapperExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableTypeMapperExtension.swift; sourceTree = "<group>"; };
+		E49BBC4E26DA2A7E00C144EA /* StoreMoneyServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreMoneyServiceAssembly.swift; sourceTree = "<group>"; };
+		E49BBC5026DA2B6400C144EA /* ApiMoneyServiceAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiMoneyServiceAssembly.swift; sourceTree = "<group>"; };
+		E49BBC5326DA2E3E00C144EA /* MoneyRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRepository.swift; sourceTree = "<group>"; };
+		E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRepositoryAssembly.swift; sourceTree = "<group>"; };
 		E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCoreAssembly.swift; sourceTree = "<group>"; };
 		E4F8E67026D2614900BB52B9 /* WorldMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F8E67326D2614900BB52B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +133,31 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		E49BBC4A26DA1A5900C144EA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC4B26DA1A6C00C144EA /* RX */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E49BBC4B26DA1A6C00C144EA /* RX */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC4C26DA1ABB00C144EA /* ObservableTypeMapperExtension.swift */,
+			);
+			path = RX;
+			sourceTree = "<group>";
+		};
+		E49BBC5226DA2E1000C144EA /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC5326DA2E3E00C144EA /* MoneyRepository.swift */,
+				E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
 		E4F8E66726D2614900BB52B9 = {
 			isa = PBXGroup;
 			children = (
@@ -138,6 +177,8 @@
 		E4F8E67226D2614900BB52B9 /* WorldMoney */ = {
 			isa = PBXGroup;
 			children = (
+				E49BBC5226DA2E1000C144EA /* Repository */,
+				E49BBC4A26DA1A5900C144EA /* Extensions */,
 				E49526D426D511B600D959AE /* Entities */,
 				E4F8E69826D296B500BB52B9 /* Services */,
 				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
@@ -166,6 +207,8 @@
 			isa = PBXGroup;
 			children = (
 				E4F8E69A26D296D600BB52B9 /* NetworkCore */,
+				E49BBC4826DA138B00C144EA /* ApiMoneyService.swift */,
+				E49BBC5026DA2B6400C144EA /* ApiMoneyServiceAssembly.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -183,6 +226,8 @@
 			isa = PBXGroup;
 			children = (
 				E4F8E6A826D2AC7100BB52B9 /* StorageCore */,
+				E49526EB26D5506400D959AE /* StoreMoneyService.swift */,
+				E49BBC4E26DA2A7E00C144EA /* StoreMoneyServiceAssembly.swift */,
 			);
 			path = Storage;
 			sourceTree = "<group>";
@@ -284,15 +329,22 @@
 				E4F8E67826D2614900BB52B9 /* ViewController.swift in Sources */,
 				E49526E726D5462500D959AE /* Stock.swift in Sources */,
 				E4F8E6A426D2A54800BB52B9 /* ConfigServices.swift in Sources */,
+				E49BBC4926DA138B00C144EA /* ApiMoneyService.swift in Sources */,
 				E49526E126D5347400D959AE /* StockRealm.swift in Sources */,
 				E49526E326D5350B00D959AE /* PriceRealm.swift in Sources */,
+				E49BBC4D26DA1ABB00C144EA /* ObservableTypeMapperExtension.swift in Sources */,
 				E49526E926D5465800D959AE /* Price.swift in Sources */,
 				E4F8E6AA26D2AC9700BB52B9 /* StorageCore.swift in Sources */,
 				E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */,
 				E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */,
 				E49526DD26D532AA00D959AE /* PriceResponse.swift in Sources */,
 				E4F8E6A626D2A5E200BB52B9 /* ConfigServicesAssembly.swift in Sources */,
+				E49BBC5126DA2B6400C144EA /* ApiMoneyServiceAssembly.swift in Sources */,
 				E49526DF26D5336F00D959AE /* MoneyRealm.swift in Sources */,
+				E49BBC4F26DA2A7E00C144EA /* StoreMoneyServiceAssembly.swift in Sources */,
+				E49BBC5626DA52E800C144EA /* MoneyRepositoryAssembly.swift in Sources */,
+				E49BBC5426DA2E3E00C144EA /* MoneyRepository.swift in Sources */,
+				E49526EC26D5506400D959AE /* StoreMoneyService.swift in Sources */,
 				E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */,
 				E49526D926D5323400D959AE /* MoneyResponse.swift in Sources */,
 				E4F8E69C26D2991800BB52B9 /* NetworkCore.swift in Sources */,
