@@ -40,7 +40,7 @@ public class MoneyRepository {
             .ifEmpty(default: findStorage())
     }
     
-    func getCurrentMoney(symbol: String) -> Observable<Money?> {
+    func getCurrentMoney(_ symbol: String) -> Observable<Money?> {
         return apiMoneyService.getCurrentMoney(symbol: symbol)
             .flatMap { moneysResponse -> Observable<Money?> in
                 let updateStorage = self.storeMoneyService.update(

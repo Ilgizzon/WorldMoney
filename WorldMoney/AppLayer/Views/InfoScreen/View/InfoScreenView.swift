@@ -1,23 +1,23 @@
 //
-//  MainScreenView.swift
+//  InfoScreenView.swift
 //  WorldMoney
 //
-//  Created by Ilgiz Fazlyev on 28.08.2021.
+//  Created by Ilgiz Fazlyev on 29.08.2021.
 //
 
 import UIKit
 import RxSwift
 
-class MainScreenView: ViewController {
-    
+class InfoScreenView: ViewController {
+
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var activityInd: UIActivityIndicatorView!
+    private let presenter: InfoScreenPresenter
+    private let disposableBag = DisposeBag()
     var money: Money?
-    let presenter: MainScreenPresenter
-    let disposableBag = DisposeBag()
     
-    init(presenter: MainScreenPresenter) {
+    init(presenter: InfoScreenPresenter) {
         self.presenter = presenter
         super.init()
     }
@@ -34,17 +34,23 @@ class MainScreenView: ViewController {
     
     func configUI() {
         tableView.register(
-            UINib(nibName: "MainScreenCell", bundle: nil),
-            forCellReuseIdentifier: "MainScreenCell"
+            UINib(nibName: "InfoScreenCell", bundle: nil),
+            forCellReuseIdentifier: "InfoScreenCell"
         )
         tableView.dataSource = self
         
         let navItem = UINavigationItem(title: "")
         let refreshItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.refresh, target: nil, action: nil)
+        let closeItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.close, target: nil, action: nil)
         navItem.rightBarButtonItem = refreshItem
-        navigationBar.setItems([navItem], animated: false)
+        navItem.leftBarButtonItem = closeItem
+
+        self.navigationBar.setItems([navItem], animated: false)
         navItem.rightBarButtonItem?.rx.tap.subscribe(onNext: { [weak self] in
             self?.presenter.setupData()
+        }).disposed(by: disposableBag)
+        navItem.leftBarButtonItem?.rx.tap.subscribe(onNext: { [weak self] in
+            self?.presenter.openMainScreen()
         }).disposed(by: disposableBag)
     }
     
@@ -63,5 +69,5 @@ class MainScreenView: ViewController {
             }
         }
     }
-    
+
 }

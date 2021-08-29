@@ -1,23 +1,23 @@
 //
-//  MainScreenPresenter.swift
+//  InfoScreenPresenter.swift
 //  WorldMoney
 //
-//  Created by Ilgiz Fazlyev on 28.08.2021.
+//  Created by Ilgiz Fazlyev on 29.08.2021.
 //
 
 import Foundation
 import RxSwift
 
-class MainScreenPresenter {
+class InfoScreenPresenter {
     
-    weak var view: MainScreenView?
-    private let interactor: MainScreenInteractor
-    private let router: MainScreenRouter
+    weak var view: InfoScreenView?
+    private let interactor: InfoScreenInteractor
+    private let router: InfoScreenRouter
     private var disposableBag = DisposeBag()
     
     init(
-        interactor: MainScreenInteractor,
-        router: MainScreenRouter
+        interactor: InfoScreenInteractor,
+        router: InfoScreenRouter
     ) {
         self.interactor = interactor
         self.router = router
@@ -25,14 +25,14 @@ class MainScreenPresenter {
     
     func setupData() {
         view?.showLoading(true)
-        interactor.getMoneys()
+        interactor.getMoney()
             .subscribe(onNext: { [weak self] money in
                 self?.view?.setData(money)
                 self?.view?.showLoading(false)
             }).disposed(by: disposableBag)
     }
     
-    func openMoneyInfo(symbol: String?) {
-        router.openMoneyInfo(symbol: symbol)
+    func openMainScreen() {
+        router.openMainScreen()
     }
 }

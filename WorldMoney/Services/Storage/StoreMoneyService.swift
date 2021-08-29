@@ -88,7 +88,7 @@ public class StoreMoneyService {
     
     func getCurrent(symbol: String) -> MoneyRealm? {
         let cacheMoney = storageCore.realm.objects(MoneyRealm.self)
-            .filter("stock.@symbol IN %@", symbol).first
+            .filter("ANY stock.symbol == %@", symbol).first
         
         return cacheMoney
     }

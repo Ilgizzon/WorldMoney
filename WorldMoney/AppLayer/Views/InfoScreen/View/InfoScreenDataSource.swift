@@ -1,13 +1,13 @@
 //
-//  MainScreenViewDataSource.swift
+//  InfoScreenDataSource.swift
 //  WorldMoney
 //
-//  Created by Ilgiz Fazlyev on 28.08.2021.
+//  Created by Ilgiz Fazlyev on 29.08.2021.
 //
 
 import UIKit
 
-extension MainScreenView: UITableViewDataSource {
+extension InfoScreenView: UITableViewDataSource {
     func tableView(
         _ tableView: UITableView,
         numberOfRowsInSection section: Int
@@ -21,15 +21,14 @@ extension MainScreenView: UITableViewDataSource {
     ) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(
-            withIdentifier: "MainScreenCell",
+            withIdentifier: "InfoScreenCell",
             for: indexPath
-        ) as! MainScreenCell
+        ) as! InfoScreenCell
         let stock = money?.stock[indexPath.row]
         
         cell.setData(
             name: stock?.name,
-            symbol:stock?.symbol,
-            delegate: self
+            amount:"\(stock?.price.amount ?? 0)"
         )
         return cell
         

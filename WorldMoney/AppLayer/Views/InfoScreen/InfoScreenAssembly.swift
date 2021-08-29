@@ -1,5 +1,5 @@
 //
-//  MainScreenAssembly.swift
+//  InfoScreenAssembly.swift
 //  WorldMoney
 //
 //  Created by Ilgiz Fazlyev on 29.08.2021.
@@ -8,12 +8,12 @@
 import EasyDi
 
 
-class MainScreenAssembly: Assembly {
+class InfoScreenAssembly: Assembly {
 
 
-    
-    var view: MainScreenView {
-        define(init: MainScreenView(
+    var symbol = ""
+    var view: InfoScreenView {
+        define(init: InfoScreenView(
             presenter: self.presenter
         )) {
             self.presenter.view = $0
@@ -21,14 +21,14 @@ class MainScreenAssembly: Assembly {
         }
     }
     
-    private var router: MainScreenRouter {
-        define(init: MainScreenRouter(
+    private var router: InfoScreenRouter {
+        define(init: InfoScreenRouter(
                 navigationService: self.navigationServiceAssembly.service
         )) { $0 }
     }
     
-    private var presenter: MainScreenPresenter {
-        define(init: MainScreenPresenter(
+    private var presenter: InfoScreenPresenter {
+        define(init: InfoScreenPresenter(
             interactor: self.interactor,
             router: self.router
         )) {
@@ -37,9 +37,10 @@ class MainScreenAssembly: Assembly {
         }
     }
     
-    private var interactor: MainScreenInteractor {
-        define(init: MainScreenInteractor(
-            moneyRepo: self.moneyRepositoryAssembly.moneyRepository
+    private var interactor: InfoScreenInteractor {
+        define(init: InfoScreenInteractor(
+            moneyRepo: self.moneyRepositoryAssembly.moneyRepository,
+            symbol: self.symbol
         )) { $0 }
     }
     
