@@ -25,6 +25,13 @@
 		E49BBC5626DA52E800C144EA /* MoneyRepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */; };
 		E49BBC6326DA749700C144EA /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC6126DA749700C144EA /* MainScreenView.swift */; };
 		E49BBC6426DA749700C144EA /* MainScreenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49BBC6226DA749700C144EA /* MainScreenView.xib */; };
+		E49BBC6726DAAEAC00C144EA /* MainScreenViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC6626DAAEAC00C144EA /* MainScreenViewDataSource.swift */; };
+		E49BBC6B26DAB11800C144EA /* MainScreenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC6926DAB11800C144EA /* MainScreenCell.swift */; };
+		E49BBC6C26DAB11800C144EA /* MainScreenCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E49BBC6A26DAB11800C144EA /* MainScreenCell.xib */; };
+		E49BBC6E26DAB77200C144EA /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC6D26DAB77200C144EA /* MainScreenPresenter.swift */; };
+		E49BBC7126DABE5500C144EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC7026DABE5500C144EA /* ViewController.swift */; };
+		E49BBC7326DABFCC00C144EA /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC7226DABFCC00C144EA /* MainScreenRouter.swift */; };
+		E49BBC7526DAC0D100C144EA /* MainScreenAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49BBC7426DAC0D100C144EA /* MainScreenAssembly.swift */; };
 		E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */; };
 		E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67326D2614900BB52B9 /* AppDelegate.swift */; };
 		E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */; };
@@ -62,6 +69,13 @@
 		E49BBC5526DA52E800C144EA /* MoneyRepositoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyRepositoryAssembly.swift; sourceTree = "<group>"; };
 		E49BBC6126DA749700C144EA /* MainScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		E49BBC6226DA749700C144EA /* MainScreenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenView.xib; sourceTree = "<group>"; };
+		E49BBC6626DAAEAC00C144EA /* MainScreenViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewDataSource.swift; sourceTree = "<group>"; };
+		E49BBC6926DAB11800C144EA /* MainScreenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenCell.swift; sourceTree = "<group>"; };
+		E49BBC6A26DAB11800C144EA /* MainScreenCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainScreenCell.xib; sourceTree = "<group>"; };
+		E49BBC6D26DAB77200C144EA /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		E49BBC7026DABE5500C144EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E49BBC7226DABFCC00C144EA /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		E49BBC7426DAC0D100C144EA /* MainScreenAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenAssembly.swift; sourceTree = "<group>"; };
 		E4BADD4A26D3F37E00D23712 /* StorageCoreAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCoreAssembly.swift; sourceTree = "<group>"; };
 		E4F8E67026D2614900BB52B9 /* WorldMoney.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldMoney.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4F8E67326D2614900BB52B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +184,8 @@
 		E49BBC5826DA714000C144EA /* AppLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E49BBC6F26DABE3200C144EA /* Classes */,
+				E49BBC5926DA717100C144EA /* Views */,
 				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
 				E4F8E67526D2614900BB52B9 /* SceneDelegate.swift */,
 			);
@@ -187,10 +203,40 @@
 		E49BBC5A26DA729A00C144EA /* MainScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E49BBC6126DA749700C144EA /* MainScreenView.swift */,
+				E49BBC6826DAB09700C144EA /* Cell */,
+				E49BBC6526DA9D5400C144EA /* View */,
 				E49BBC6226DA749700C144EA /* MainScreenView.xib */,
+				E49BBC6D26DAB77200C144EA /* MainScreenPresenter.swift */,
+				E49BBC7226DABFCC00C144EA /* MainScreenRouter.swift */,
+				E49BBC7426DAC0D100C144EA /* MainScreenAssembly.swift */,
 			);
 			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		E49BBC6526DA9D5400C144EA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC6126DA749700C144EA /* MainScreenView.swift */,
+				E49BBC6626DAAEAC00C144EA /* MainScreenViewDataSource.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E49BBC6826DAB09700C144EA /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC6926DAB11800C144EA /* MainScreenCell.swift */,
+				E49BBC6A26DAB11800C144EA /* MainScreenCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		E49BBC6F26DABE3200C144EA /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E49BBC7026DABE5500C144EA /* ViewController.swift */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E4F8E66726D2614900BB52B9 = {
@@ -212,7 +258,6 @@
 		E4F8E67226D2614900BB52B9 /* WorldMoney */ = {
 			isa = PBXGroup;
 			children = (
-				E49BBC5926DA717100C144EA /* Views */,
 				E49BBC5826DA714000C144EA /* AppLayer */,
 				E49BBC5726DA711700C144EA /* Resources */,
 				E49BBC5226DA2E1000C144EA /* Repository */,
@@ -345,6 +390,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49BBC6C26DAB11800C144EA /* MainScreenCell.xib in Resources */,
 				E4F8E68026D2614C00BB52B9 /* LaunchScreen.storyboard in Resources */,
 				E4F8E67D26D2614C00BB52B9 /* Assets.xcassets in Resources */,
 				E49BBC6426DA749700C144EA /* MainScreenView.xib in Resources */,
@@ -360,12 +406,16 @@
 			files = (
 				E49526E726D5462500D959AE /* Stock.swift in Sources */,
 				E4F8E6A426D2A54800BB52B9 /* ConfigServices.swift in Sources */,
+				E49BBC7526DAC0D100C144EA /* MainScreenAssembly.swift in Sources */,
 				E49BBC4926DA138B00C144EA /* ApiMoneyService.swift in Sources */,
+				E49BBC7326DABFCC00C144EA /* MainScreenRouter.swift in Sources */,
 				E49526E126D5347400D959AE /* StockRealm.swift in Sources */,
 				E49526E326D5350B00D959AE /* PriceRealm.swift in Sources */,
 				E49BBC4D26DA1ABB00C144EA /* ObservableTypeMapperExtension.swift in Sources */,
+				E49BBC6B26DAB11800C144EA /* MainScreenCell.swift in Sources */,
 				E49526E926D5465800D959AE /* Price.swift in Sources */,
 				E4F8E6AA26D2AC9700BB52B9 /* StorageCore.swift in Sources */,
+				E49BBC6E26DAB77200C144EA /* MainScreenPresenter.swift in Sources */,
 				E4F8E67426D2614900BB52B9 /* AppDelegate.swift in Sources */,
 				E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */,
 				E49526DD26D532AA00D959AE /* PriceResponse.swift in Sources */,
@@ -376,10 +426,12 @@
 				E49BBC5626DA52E800C144EA /* MoneyRepositoryAssembly.swift in Sources */,
 				E49BBC5426DA2E3E00C144EA /* MoneyRepository.swift in Sources */,
 				E49526EC26D5506400D959AE /* StoreMoneyService.swift in Sources */,
+				E49BBC7126DABE5500C144EA /* ViewController.swift in Sources */,
 				E4BADD4B26D3F37E00D23712 /* StorageCoreAssembly.swift in Sources */,
 				E49526D926D5323400D959AE /* MoneyResponse.swift in Sources */,
 				E4F8E69C26D2991800BB52B9 /* NetworkCore.swift in Sources */,
 				E49BBC6326DA749700C144EA /* MainScreenView.swift in Sources */,
+				E49BBC6726DAAEAC00C144EA /* MainScreenViewDataSource.swift in Sources */,
 				E49526DB26D5328700D959AE /* StockResponse.swift in Sources */,
 				E49526E526D545C600D959AE /* Money.swift in Sources */,
 				E4F8E69E26D29EA000BB52B9 /* NetworkCoreAssembly.swift in Sources */,

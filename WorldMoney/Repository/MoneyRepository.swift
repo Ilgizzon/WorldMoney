@@ -82,8 +82,8 @@ public class MoneyRepository {
         
         for stock in storageData.stock {
             let price = Price(
-                currency: stock.price.currency,
-                amount: stock.price.amount
+                currency: stock.price?.currency,
+                amount: stock.price?.amount
             )
             
             let stock = Stock(

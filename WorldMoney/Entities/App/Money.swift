@@ -9,11 +9,11 @@ import Foundation
 
 class Money {
     let stock: [Stock]
-    let asOf: Date
+    let asOf: Date?
     
     init(
         stock: [Stock],
-        asOf: Date
+        asOf: Date?
     ) {
         self.stock = stock
         self.asOf = asOf

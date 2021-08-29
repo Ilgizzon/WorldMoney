@@ -18,29 +18,43 @@ public class StoreMoneyService {
         getAsOf()
     }
     
-    func saveAll(money: MoneyRealm) -> MoneyRealm {
+    func saveAll(money: MoneyRealm) -> MoneyRealm? {
         guard let date = lastAsOf else {
-            storageCore.realm.add(money, update: .all)
+            try! storageCore.realm.write {
+                storageCore.realm.add(money, update: .all)
+            }
             lastAsOf = money.asOf
-            return money.freeze()
+            return money
         }
        
-        if date < money.asOf {
-            storageCore.realm.add(money, update: .all)
+        guard let newAsOf = money.asOf else {
+            return nil
+        }
+        
+        if date < newAsOf {
+            try! storageCore.realm.write {
+                storageCore.realm.add(money, update: .all)
+            }
             lastAsOf = money.asOf
         }
         
-        return money.freeze()
+        return money
     }
     
     func update(money: MoneyRealm) -> MoneyRealm? {
-        guard let cacheMoney = storageCore.realm.objects(MoneyRealm.self).first else {
-            storageCore.realm.add(money, update: .all)
+        guard let cacheMoneyAsOf = storageCore.realm.objects(MoneyRealm.self).first?.asOf else {
+            try! storageCore.realm.write {
+                storageCore.realm.add(money, update: .all)
+            }
             lastAsOf = money.asOf
-            return money.freeze()
+            return money
         }
         
-        if cacheMoney.asOf < money.asOf {
+        guard let newAsOf = money.asOf else {
+            return nil
+        }
+        
+        if cacheMoneyAsOf < newAsOf {
             let symbols = money.stock.map { $0.symbol }
             guard let stocksForUpdate = storageCore.realm.objects(MoneyRealm.self)
                 .first?.stock
@@ -64,7 +78,7 @@ public class StoreMoneyService {
             }
         }
         
-        return money.freeze()
+        return money
     }
     
     func getAll() -> MoneyRealm? {

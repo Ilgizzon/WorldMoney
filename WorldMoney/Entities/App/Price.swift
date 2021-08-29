@@ -8,12 +8,12 @@
 import Foundation
 
 class Price {
-    let currency: String
-    let amount: Double
+    let currency: String?
+    let amount: Double?
     
     init(
-        currency: String,
-        amount: Double
+        currency: String?,
+        amount: Double?
     ) {
         self.currency = currency
         self.amount = amount

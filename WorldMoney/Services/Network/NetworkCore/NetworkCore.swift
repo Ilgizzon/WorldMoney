@@ -45,9 +45,11 @@ public class NetworkCore {
             encoding = JSONEncoding.default
         }
         
+        let fullPath = apiBase + path
+        
         return session.rx.responseJSON(
             method,
-            path,
+            fullPath,
             parameters: parameters,
             encoding: encoding
         )
