@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InfoScreenView" customModule="WorldMoney" customModuleProvider="target">
+            <connections>
+                <outlet property="activityInd" destination="bEb-04-WTu" id="BLC-h7-Aw3"/>
+                <outlet property="navigationBar" destination="swk-ZW-dbH" id="CzD-f9-uel"/>
+                <outlet property="tableView" destination="oHr-ro-DgZ" id="ulz-8a-dBX"/>
+                <outlet property="topOffset" destination="VqV-u0-UzV" id="i9I-s3-X8v"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oHr-ro-DgZ">
+                    <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="swk-ZW-dbH">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <items>
+                        <navigationItem id="798-LB-GpC"/>
+                    </items>
+                </navigationBar>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="bEb-04-WTu">
+                    <rect key="frame" x="197" y="438" width="20" height="20"/>
+                </activityIndicatorView>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="oHr-ro-DgZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="3qk-Km-y4U"/>
+                <constraint firstItem="bEb-04-WTu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="4ZQ-Ru-RPO"/>
+                <constraint firstAttribute="trailing" secondItem="swk-ZW-dbH" secondAttribute="trailing" id="53c-xK-NWY"/>
+                <constraint firstItem="oHr-ro-DgZ" firstAttribute="top" secondItem="swk-ZW-dbH" secondAttribute="bottom" id="KS4-i3-6HA"/>
+                <constraint firstItem="swk-ZW-dbH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="U5n-hc-bVV"/>
+                <constraint firstItem="swk-ZW-dbH" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="VqV-u0-UzV"/>
+                <constraint firstItem="bEb-04-WTu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="ZKo-JV-s2V"/>
+                <constraint firstAttribute="trailing" secondItem="oHr-ro-DgZ" secondAttribute="trailing" id="ZNk-VU-ydt"/>
+                <constraint firstAttribute="bottom" secondItem="oHr-ro-DgZ" secondAttribute="bottom" id="dYf-pf-vu6"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-39.130434782608695" y="49.553571428571423"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
