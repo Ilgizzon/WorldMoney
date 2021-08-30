@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E446E72126DCB7DD00DE74BF /* OfflineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E446E72026DCB7DD00DE74BF /* OfflineView.swift */; };
+		E446E72326DCC04D00DE74BF /* OfflineView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E446E72226DCC04D00DE74BF /* OfflineView.xib */; };
 		E49526D926D5323400D959AE /* MoneyResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526D826D5323400D959AE /* MoneyResponse.swift */; };
 		E49526DB26D5328700D959AE /* StockResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526DA26D5328700D959AE /* StockResponse.swift */; };
 		E49526DD26D532AA00D959AE /* PriceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49526DC26D532AA00D959AE /* PriceResponse.swift */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E446E72026DCB7DD00DE74BF /* OfflineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineView.swift; sourceTree = "<group>"; };
+		E446E72226DCC04D00DE74BF /* OfflineView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OfflineView.xib; sourceTree = "<group>"; };
 		E49526D826D5323400D959AE /* MoneyResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyResponse.swift; sourceTree = "<group>"; };
 		E49526DA26D5328700D959AE /* StockResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockResponse.swift; sourceTree = "<group>"; };
 		E49526DC26D532AA00D959AE /* PriceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceResponse.swift; sourceTree = "<group>"; };
@@ -137,6 +141,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E446E71E26DCB6A100DE74BF /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+				E446E71F26DCB75D00DE74BF /* OfflineView */,
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		E446E71F26DCB75D00DE74BF /* OfflineView */ = {
+			isa = PBXGroup;
+			children = (
+				E446E72026DCB7DD00DE74BF /* OfflineView.swift */,
+				E446E72226DCC04D00DE74BF /* OfflineView.xib */,
+			);
+			path = OfflineView;
+			sourceTree = "<group>";
+		};
 		E49526D426D511B600D959AE /* Entities */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +235,7 @@
 		E49BBC5826DA714000C144EA /* AppLayer */ = {
 			isa = PBXGroup;
 			children = (
+				E446E71E26DCB6A100DE74BF /* UIComponents */,
 				E49BBC6F26DABE3200C144EA /* Classes */,
 				E49BBC5926DA717100C144EA /* Views */,
 				E4F8E67326D2614900BB52B9 /* AppDelegate.swift */,
@@ -489,6 +511,7 @@
 				E4F8E67D26D2614C00BB52B9 /* Assets.xcassets in Resources */,
 				E49BBC6426DA749700C144EA /* MainScreenView.xib in Resources */,
 				E4A5458B26DBEA4600F0EFA3 /* InfoScreenCell.xib in Resources */,
+				E446E72326DCC04D00DE74BF /* OfflineView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +542,7 @@
 				E4A5458226DBE32D00F0EFA3 /* InfoScreenInteractor.swift in Sources */,
 				E4F8E67626D2614900BB52B9 /* SceneDelegate.swift in Sources */,
 				E49526DD26D532AA00D959AE /* PriceResponse.swift in Sources */,
+				E446E72126DCB7DD00DE74BF /* OfflineView.swift in Sources */,
 				E4F8E6A626D2A5E200BB52B9 /* ConfigServicesAssembly.swift in Sources */,
 				E49BBC5126DA2B6400C144EA /* ApiMoneyServiceAssembly.swift in Sources */,
 				E49526DF26D5336F00D959AE /* MoneyRealm.swift in Sources */,

@@ -14,7 +14,7 @@ class MainScreenInteractor {
         self.moneyRepo = moneyRepo
     }
     
-    func getMoneys() -> Observable<Money?> {
+    func getMoneys() -> Observable<(Money?, offline:Bool)> {
         moneyRepo.getAllMoneys()
     }
 }

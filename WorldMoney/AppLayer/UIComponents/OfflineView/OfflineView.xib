@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OfflineView" customModule="WorldMoney" customModuleProvider="target">
+            <connections>
+                <outlet property="labelView" destination="wQd-vJ-EXo" id="hvZ-vp-vU8"/>
+                <outlet property="timeLabel" destination="eOT-eO-8jp" id="9pE-2C-9EC"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wQd-vJ-EXo">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Offline mode. Cache date is:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nUL-T8-HhC">
+                            <rect key="frame" x="14" y="14" width="386" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eOT-eO-8jp">
+                            <rect key="frame" x="14" y="49" width="386" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="nUL-T8-HhC" firstAttribute="top" secondItem="wQd-vJ-EXo" secondAttribute="top" constant="14" id="MfA-aN-fRw"/>
+                        <constraint firstAttribute="trailing" secondItem="eOT-eO-8jp" secondAttribute="trailing" constant="14" id="Wpp-cm-9gL"/>
+                        <constraint firstAttribute="trailing" secondItem="nUL-T8-HhC" secondAttribute="trailing" constant="14" id="d3n-k4-F19"/>
+                        <constraint firstItem="nUL-T8-HhC" firstAttribute="leading" secondItem="wQd-vJ-EXo" secondAttribute="leading" constant="14" id="mGS-L3-eMe"/>
+                        <constraint firstItem="eOT-eO-8jp" firstAttribute="leading" secondItem="wQd-vJ-EXo" secondAttribute="leading" constant="14" id="n9S-PN-4b0"/>
+                        <constraint firstItem="eOT-eO-8jp" firstAttribute="top" secondItem="nUL-T8-HhC" secondAttribute="bottom" constant="14" id="qO0-RZ-ZED"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="wQd-vJ-EXo" secondAttribute="trailing" id="ARV-ME-f0t"/>
+                <constraint firstItem="wQd-vJ-EXo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="MfP-R6-MTo"/>
+                <constraint firstAttribute="bottom" secondItem="wQd-vJ-EXo" secondAttribute="bottom" id="oFi-S2-l95"/>
+                <constraint firstItem="wQd-vJ-EXo" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="vO1-lh-bS2"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-39" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

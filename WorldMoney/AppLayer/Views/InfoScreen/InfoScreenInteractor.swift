@@ -19,7 +19,7 @@ class InfoScreenInteractor {
         self.symbol = symbol
     }
     
-    func getMoney() -> Observable<Money?> {
+    func getMoney() -> Observable<(Money?, offline:Bool)> {
         moneyRepo.getCurrentMoney(symbol)
     }
 }

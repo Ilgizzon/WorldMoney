@@ -22,16 +22,16 @@ public class MoneyRepository {
         self.storeMoneyService = storeMoneyService
     }
     
-    func getAllMoneys() -> Observable<Money?> {
+    func getAllMoneys() -> Observable<(Money?, offline:Bool)> {
         return apiMoneyService.getAllMoneys()
-            .flatMap { moneysResponse -> Observable<Money?> in
+            .flatMap { moneysResponse -> Observable<(Money?, offline:Bool)> in
                 let saveStorage = self.storeMoneyService.saveAll(
                     money: self.convertNetworkToStorage(response: moneysResponse)
                 )
                 
                 let money = self.convertStorageToApp(storageData: saveStorage)
                 
-                return Observable<Money?>.just(money)
+                return Observable<(Money?, offline:Bool)>.just((money, offline: false))
                 
             }
             .catch({ _ in
@@ -41,16 +41,16 @@ public class MoneyRepository {
             .observe(on: MainScheduler.instance)
     }
     
-    func getCurrentMoney(_ symbol: String) -> Observable<Money?> {
+    func getCurrentMoney(_ symbol: String) -> Observable<(Money?, offline:Bool)> {
         return apiMoneyService.getCurrentMoney(symbol: symbol)
-            .flatMap { moneysResponse -> Observable<Money?> in
+            .flatMap { moneysResponse -> Observable<(Money?, offline:Bool)> in
                 let updateStorage = self.storeMoneyService.update(
                     money: self.convertNetworkToStorage(response: moneysResponse)
                 )
                 
                 let money = self.convertStorageToApp(storageData: updateStorage)
                 
-                return Observable<Money?>.just(money)
+                return Observable<(Money?, offline:Bool)>.just((money, offline: false))
             }
             .catch({ _ in
                 return self.findStorage(symbol)
@@ -116,7 +116,7 @@ public class MoneyRepository {
         
     }
     
-    private func findStorage(_ symbol: String? = nil) -> Observable<Money?> {
+    private func findStorage(_ symbol: String? = nil) -> Observable<(Money?, offline:Bool)> {
         
         var storage: MoneyRealm?
         if let strongSymbol = symbol {
@@ -127,7 +127,7 @@ public class MoneyRepository {
         
         let money = self.convertStorageToApp(storageData: storage)
         
-        return Observable<Money?>.just(money)
+        return Observable<(Money?, offline:Bool)>.just((money, offline:true))
         
     }
 }

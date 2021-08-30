@@ -35,7 +35,14 @@ class MainScreenPresenter {
         requestState = .inProgress
         view?.showLoading(true)
         interactor.getMoneys()
-            .subscribe(onNext: { [weak self] money in
+            .subscribe(onNext: { [weak self] money, offline in
+                
+                if offline {
+                    self?.view?.showErrorView(date: money?.asOf)
+                } else {
+                    self?.view?.hideErrorView()
+                }
+                
                 self?.view?.setData(money)
                 self?.view?.showLoading(false)
                 self?.requestState = .done
