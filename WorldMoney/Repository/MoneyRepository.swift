@@ -37,6 +37,8 @@ public class MoneyRepository {
             .catch({ _ in
                 return self.findStorage()
             })
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
     }
     
     func getCurrentMoney(_ symbol: String) -> Observable<Money?> {
@@ -53,6 +55,8 @@ public class MoneyRepository {
             .catch({ _ in
                 return self.findStorage(symbol)
             })
+            .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
+            .observe(on: MainScheduler.instance)
     }
     
     private func convertNetworkToStorage(response: MoneyResponse) -> MoneyRealm {

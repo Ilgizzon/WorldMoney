@@ -30,8 +30,6 @@ public extension ObservableType where Element == Any {
             
             return Observable<T>.just(decodedObject)
         })
-        .subscribe(on: ConcurrentDispatchQueueScheduler(qos: .background))
-        .observe(on: MainScheduler.instance)
     }
 }
 
