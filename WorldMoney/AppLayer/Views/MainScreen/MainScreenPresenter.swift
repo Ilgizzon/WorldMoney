@@ -10,10 +10,15 @@ import RxSwift
 
 class MainScreenPresenter {
     
+    enum RequestState {
+        case done, inProgress
+    }
+    
     weak var view: MainScreenView?
     private let interactor: MainScreenInteractor
     private let router: MainScreenRouter
     private var disposableBag = DisposeBag()
+    private var requestState: RequestState = .done
     
     init(
         interactor: MainScreenInteractor,
@@ -24,11 +29,16 @@ class MainScreenPresenter {
     }
     
     func setupData() {
+        guard requestState == .done else {
+            return
+        }
+        requestState = .inProgress
         view?.showLoading(true)
         interactor.getMoneys()
             .subscribe(onNext: { [weak self] money in
                 self?.view?.setData(money)
                 self?.view?.showLoading(false)
+                self?.requestState = .done
             }).disposed(by: disposableBag)
     }
     

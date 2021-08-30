@@ -9,7 +9,6 @@ import RxSwift
 
 class InfoScreenInteractor {
     private let moneyRepo: MoneyRepository
-    private var disposableBag = DisposeBag()
     private var symbol: String
     
     init(

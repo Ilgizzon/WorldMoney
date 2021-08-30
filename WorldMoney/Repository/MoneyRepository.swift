@@ -34,10 +34,9 @@ public class MoneyRepository {
                 return Observable<Money?>.just(money)
                 
             }
-            .retry(when: {_ -> Observable<Money?> in
-                return Observable<Money?>.empty()
+            .catch({ _ in
+                return self.findStorage()
             })
-            .ifEmpty(default: findStorage())
     }
     
     func getCurrentMoney(_ symbol: String) -> Observable<Money?> {
@@ -51,10 +50,9 @@ public class MoneyRepository {
                 
                 return Observable<Money?>.just(money)
             }
-            .retry(when: {_ -> Observable<Money?> in
-                return Observable<Money?>.empty()
+            .catch({ _ in
+                return self.findStorage(symbol)
             })
-            .ifEmpty(default: findStorage(symbol))
     }
     
     private func convertNetworkToStorage(response: MoneyResponse) -> MoneyRealm {
@@ -114,7 +112,7 @@ public class MoneyRepository {
         
     }
     
-    private func findStorage(_ symbol: String? = nil) -> Money? {
+    private func findStorage(_ symbol: String? = nil) -> Observable<Money?> {
         
         var storage: MoneyRealm?
         if let strongSymbol = symbol {
@@ -125,7 +123,7 @@ public class MoneyRepository {
         
         let money = self.convertStorageToApp(storageData: storage)
         
-        return money
+        return Observable<Money?>.just(money)
         
     }
 }

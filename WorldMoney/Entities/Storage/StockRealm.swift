@@ -14,4 +14,5 @@ class StockRealm: Object {
     @Persisted var percentChange: Double
     @Persisted var volume: Int
     @Persisted(indexed: true) var symbol: String
+    let owners = LinkingObjects(fromType: MoneyRealm.self, property: "stock")
 }

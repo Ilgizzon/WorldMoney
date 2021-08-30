@@ -87,10 +87,19 @@ public class StoreMoneyService {
     }
     
     func getCurrent(symbol: String) -> MoneyRealm? {
-        let cacheMoney = storageCore.realm.objects(MoneyRealm.self)
-            .filter("ANY stock.symbol == %@", symbol).first
+        let sortedSymbols = storageCore.realm.objects(StockRealm.self)
+            .filter("symbol == %@", symbol)
         
-        return cacheMoney
+        let sortedMoney = MoneyRealm()
+        sortedMoney.asOf = sortedSymbols.first?.owners.first?.asOf
+        
+        let stockList = List<StockRealm>()
+        for oneStock in sortedSymbols {
+            stockList.append(oneStock)
+        }
+        sortedMoney.stock = stockList
+        
+        return sortedMoney
     }
     
     private func getAsOf() {
